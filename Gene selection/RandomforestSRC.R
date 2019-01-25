@@ -39,7 +39,7 @@ vars <- var.select(object = res.rsf,
            nodesize = nodesize, splitrule = "logrankscore", nsplit = 10, xvar.wt = NULL,
            refit = T, fast = T,
            na.action = c("na.impute"), 
-           always.use = NULL, nrep = 100, K = 10, nstep = 100,  #repetiting 100 times
+           always.use = NULL, nrep = 100, K = 10, nstep = 200,  #repetiting 100 times
            prefit =  list(action = T, ntree = 1000,
                           mtry = mtry, nodesize = nodesize, nsplit = 1),
            verbose = TRUE)
