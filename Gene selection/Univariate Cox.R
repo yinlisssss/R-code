@@ -1,5 +1,7 @@
 library(tidyverse)
 library(survival)
+TCGALUAD<-read.csv('TCGALUAD.csv',row.name=1)
+TCGALUAD <- TCGALUAD[TCGALUAD$times>=30,]     #follow-up days > 30
 ##################################
 TCGACoxoutput=data.frame()
 for(i in colnames(TCGALUAD[,3:ncol(TCGALUAD)])){
