@@ -5,6 +5,8 @@ library("tidyverse")
 library("plyr")
 library("survival")
 library("ggsci")
+TCGALUAD<-read.csv('TCGALUAD.csv',row.name=1)
+TCGALUAD <- TCGALUAD[TCGALUAD$times>=30,]     #follow-up days > 30
 ############################################
 set.seed(2019)
 TCGALUAD[1:4,1:4]
