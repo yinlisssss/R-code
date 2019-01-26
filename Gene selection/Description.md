@@ -6,7 +6,7 @@ So, the file is split using command 'split'
 split -b 20000kb TCGALUAD.zip TCGA_input_part
 ```
 
-To recover them, simply use
+To recover them, simply run
 ```
 cat TCGA_input_part* > TCGALUAD.zip
 ```
