@@ -1,5 +1,6 @@
-#######This algorithm could take huge time
+#######This algorithm could take huge time(hours to days)
 library(sigFeature)
+set.seed(2019)
 ####################################
 x <- as.matrix(TCGALUAD[,3:ncol(TCGALUAD)])
 y <- as.matrix(TCGALUAD$status)
