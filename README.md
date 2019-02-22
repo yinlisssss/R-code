@@ -1,4 +1,3 @@
 # R-code
-R code for reproducing the results of the 16-gene based prediction model
+R code for reproducing the results of the gene selection step
 
-Note: Code only contains key steps in the manuscript, code for data visualization is not attached
