@@ -27,9 +27,6 @@ res.rsf <- rfsrc(stp,
                  mtry=mtry,
                  proximity=T, 
                  statistics = F)
-
-plot(res.rsf)
-plot.survival(res.rsf)
 ############################################Variable selection 
 vars <- var.select(object = res.rsf,
            cause =1,
