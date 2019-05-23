@@ -1,5 +1,5 @@
 # R-code
-R code for reproducing the results of the gene selection step
+R code for reproducing the results
 
 Step1: Data_download
 
