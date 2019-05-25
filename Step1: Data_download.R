@@ -21,6 +21,23 @@ dataNorm <- TCGAanalyze_Normalization(tabDF = dataPrep,
 dataFilt <- TCGAanalyze_Filtering(tabDF = dataNorm,
                                   method = "quantile",
                                   qnt.cut = 0.25)
+
+
+#Differential analysis, check all genes' log fold change
+# selection of normal samples "NT"
+samplesNT <- TCGAquery_SampleTypes(barcode = colnames(dataFilt),
+typesample = c("NT"))
+# selection of tumor samples "TP"
+samplesTP <- TCGAquery_SampleTypes(barcode = colnames(dataFilt),
+typesample = c("TP"))
+# Diff.expr.analysis (DEA)
+tcga <- TCGAanalyze_DEA(mat1 = dataFilt[,samplesNT],
+                            mat2 = dataFilt[,samplesTP],
+                            Cond1type = "Normal",
+                            Cond2type = "Tumor",
+                            fdr.cut = 1 ,
+                            logFC.cut = 0,
+                            method = "glmLRT")
 ######GEO 
 #GEO CEL files can be manually downloaded from https://www.ncbi.nlm.nih.gov/geo/ 
 library(affy)
