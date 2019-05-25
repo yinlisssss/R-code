@@ -26,12 +26,29 @@ dataFilt <- TCGAanalyze_Filtering(tabDF = dataNorm,
 library(affy)
 Data <- ReadAffy() ##read data in working directory
 eset <- rma(Data)
-write.exprs(eset, file="mydata.txt")
+write.exprs(eset, file="GES####.csv")#file name
 ###############
 #Once all GEO data have been downloaded, merging all to remove batch effect.
 library(sva)
 library(limma)
-#####
+
+##clinical information
+library(GEOquery)
+library(tidyverse)
+library(rlang)
+library(impute)
+library(Biobase)
+#for example use 31210, use GEOquery to download clinical information
+gset <- getGEO("GSE31210", GSEMatrix =TRUE, getGPL = TRUE, AnnotGPL = TRUE,destdir = './')
+if (length(gset) > 1) idx <- grep("GPL570", attr(gset, "names")) else idx <- 1
+gset <- gset[[idx]]
+exprdf<-data.frame(Biobase::exprs(gset))
+dim(exprdf)
+clinicaldata_31210 <- pData(gset)
+
+#then you can extract the clinical information for subsequent analysis
+
+#####read local files
 GSE19188<- read.csv("GSE19188cel.csv",row.names = 1,header = T)
 GSE30219<- read.csv("GSE30219cel.csv",row.names = 1,header = T)
 GSE31210<- read.csv("GSE31210cel.csv",row.names = 1,header = T)
