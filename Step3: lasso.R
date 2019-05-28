@@ -1,4 +1,4 @@
-###write a function for splitting data into training, internal testing, and validate in external cohorts.
+###write a function for splitting data into training, internal testing, and then validate in external cohorts.
 cirlasso<-function(train=train,test1=test1,test2=test2,varlength= 30 ,nloop=100, modelcut=0.7,R2=0.7) {
   Train<-as.data.frame(train)
   Test1<-as.data.frame(test1)
