@@ -10,3 +10,5 @@ Step2: Gene selection
 Step3: Lasso regression
 
 Step4: Roc and survival analysis
+
+Step5: Stratification analysis
