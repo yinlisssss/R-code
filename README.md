@@ -3,7 +3,7 @@ R code for reproducing the results for manuscript submitted to BMC cancer.
 
 The code covers key steps in our manuscript. 
 
-Step1: Data_download
+Step1: Data download
 
 Step2: Gene selection
 
