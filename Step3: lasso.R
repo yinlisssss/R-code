@@ -1,3 +1,19 @@
+library("glmnet")
+library("survival")
+library("survminer")
+library("survivalROC")
+library("ggsci")
+library("tidyverse")
+library("cowplot")
+library("pheatmap")
+library("ggplot2")
+library("Hmisc")
+library("plyr")
+library("foreach")
+library("doParallel")
+
+
+
 ###write a function for splitting data into training, internal testing, and then validate in external cohorts.
 cirlasso<-function(train=train,test1=test1,test2=test2,varlength= 30 ,nloop=100, modelcut=0.7,R2=0.7) {
   
