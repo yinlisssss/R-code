@@ -1,8 +1,13 @@
 ###write a function for splitting data into training, internal testing, and then validate in external cohorts.
 cirlasso<-function(train=train,test1=test1,test2=test2,varlength= 30 ,nloop=100, modelcut=0.7,R2=0.7) {
+  
   Train<-as.data.frame(train)
   Test1<-as.data.frame(test1)
-  Test2 <- as.data.frame(test2)
+  Test2<-as.data.frame(test2)
+  commongene <- Reduce(intersect,list(colnames(Train)[3:ncol(Train)],colnames(Test1)[3:ncol(Test1)],colnames(Test2)[3:ncol(Test2)]))
+  Train<-Train[,c("times","status", commongene)]
+  Test1<-Test1[,c("times","status", commongene)]
+  Test2<-Test1[,c("times","status", commongene)]
 ######
   FUN<-function(d,t1,t2,v,r){
     n<-nrow(d)
