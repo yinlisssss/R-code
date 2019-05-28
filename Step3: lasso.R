@@ -241,6 +241,6 @@ laresults<-cirlasso(train=TCGALUAD,
                     test2=external_validation,varlength=40,nloop=100000, modelcut=0.68, R2=0.7)
 
 
-
+#this will take a couple of days, depending upon the server configuration. (Macbook pro 32GB, 4 days)
 
 
