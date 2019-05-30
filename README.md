@@ -12,3 +12,9 @@ Step3: Lasso regression
 Step4: Roc and survival analysis
 
 Step5: Stratification analysis
+
+To recover GEO test and validation set data, run
+
+```
+cat external* > TCGALUAD.zip
+```
