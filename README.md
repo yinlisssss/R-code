@@ -13,6 +13,8 @@ Step4: Roc and survival analysis
 
 Step5: Stratification analysis
 
+Step6: Nomogram
+
 To recover GEO test and validation set data, run this in shell or Macos terminal.
 
 ```
