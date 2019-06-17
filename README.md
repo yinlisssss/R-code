@@ -15,6 +15,8 @@ Step5: Stratification analysis
 
 Step6: Nomogram
 
+Step7: GSEA
+
 To recover GEO test and validation set data, run this in shell or Macos terminal.
 
 ```
