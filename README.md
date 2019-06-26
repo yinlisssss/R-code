@@ -20,6 +20,6 @@ Step7: GSEA
 To recover GEO test and validation set data, run this in shell or Macos terminal.
 
 ```
-cat external_test_part* > external_test.RData
-cat external_validation_part* > external_validation.RData
+cat external_test_parta* > external_test.RData
+cat external_validation_parta* > external_validation.RData
 ```
