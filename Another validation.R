@@ -92,7 +92,7 @@ low95 = exp(log(HR) - qnorm(0.975)*sqrt(1/data.survdiff$exp[2]+1/data.survdiff$e
 HR <- paste("Hazard Ratio = ", round(HR,2), sep = "")
 CI <- paste("95% CI: ", paste(round(low95,2), round(up95,2), sep = " - "), sep = "")
 ggsurvplot(sfit,
-           conf.int=F, #置信区间
+           conf.int=F,
            #fun="pct",
            legend = c(0.8,0.9),
            palette = c("#EFC000FF", "#0073C2FF"),
@@ -133,7 +133,6 @@ survivalROC_data1 %>%
   geom_abline(intercept = 0, slope = 1, linetype = "dashed")+
   theme_bw() +
   theme(legend.position = c(0.8,0.2),element_blank(),plot.title = element_text(hjust = 0.5))+
-  scale_color_jco(labels=c("AUC at 1-year: 0.762","AUC at 3-year: 0.723","AUC at 5-year: 0.655"))+
   labs(x = "1-Specificity",y="Sensitivity",title = 'Time-dependent ROC')+
   guides(color=guide_legend(title=NULL))
 ggsave('icgcroc.pdf',height = 7,width = 7)
@@ -224,7 +223,7 @@ low95 = exp(log(HR) - qnorm(0.975)*sqrt(1/data.survdiff$exp[2]+1/data.survdiff$e
 HR <- paste("Hazard Ratio = ", round(HR,2), sep = "")
 CI <- paste("95% CI: ", paste(round(low95,2), round(up95,2), sep = " - "), sep = "")
 ggsurvplot(sfit,
-           conf.int=F, #置信区间
+           conf.int=F, 
            #fun="pct",
            legend = c(0.8,0.9),
            palette = c("#EFC000FF", "#0073C2FF"),
@@ -260,7 +259,7 @@ low95 = exp(log(HR) - qnorm(0.975)*sqrt(1/data.survdiff$exp[2]+1/data.survdiff$e
 HR <- paste("Hazard Ratio = ", round(HR,2), sep = "")
 CI <- paste("95% CI: ", paste(round(low95,2), round(up95,2), sep = " - "), sep = "")
 ggsurvplot(sfit,
-           conf.int=F, #置信区间
+           conf.int=F,
            #fun="pct",
            legend = c(0.8,0.9),
            palette = c("#EFC000FF", "#0073C2FF"),
@@ -298,7 +297,7 @@ low95 = exp(log(HR) - qnorm(0.975)*sqrt(1/data.survdiff$exp[2]+1/data.survdiff$e
 HR <- paste("Hazard Ratio = ", round(HR,2), sep = "")
 CI <- paste("95% CI: ", paste(round(low95,2), round(up95,2), sep = " - "), sep = "")
 ggsurvplot(sfit,
-           conf.int=F, #置信区间
+           conf.int=F,
            #fun="pct",
            legend = c(0.8,0.9),
            palette = c("#EFC000FF", "#0073C2FF"),
@@ -333,7 +332,7 @@ low95 = exp(log(HR) - qnorm(0.975)*sqrt(1/data.survdiff$exp[2]+1/data.survdiff$e
 HR <- paste("Hazard Ratio = ", round(HR,2), sep = "")
 CI <- paste("95% CI: ", paste(round(low95,2), round(up95,2), sep = " - "), sep = "")
 ggsurvplot(sfit,
-           conf.int=F, #置信区间
+           conf.int=F, 
            #fun="pct",
            legend = c(0.8,0.9),
            palette = c("#EFC000FF", "#0073C2FF"),
