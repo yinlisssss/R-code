@@ -113,7 +113,7 @@ low95 = exp(log(HR) - qnorm(0.975)*sqrt(1/data.survdiff$exp[2]+1/data.survdiff$e
 HR <- paste("Hazard Ratio = ", round(HR,2), sep = "")
 CI <- paste("95% CI: ", paste(round(low95,2), round(up95,2), sep = " - "), sep = "")
 ggsurvplot(sfit,
-           conf.int=F, #置信区间
+           conf.int=F, 
            #fun="pct",
            legend = c(0.8,0.9),
            palette = c("#EFC000FF", "#0073C2FF"),
